@@ -1,7 +1,8 @@
 <?php
 	ob_start();
-    //https://www.php.net/manual/en/timezones.europe.php
-	$timezone = date_default_timezone_set("Europe/Belgrade");
+	session_start();
+
+	$timezone = date_default_timezone_set("Europe/London");
 
 	$con = mysqli_connect("localhost", "root", "", "musnest");
 
