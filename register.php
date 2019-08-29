@@ -18,9 +18,35 @@
 <html>
 <head>
 	<title>Welcome to Musnest!</title>
-	<link rel="stylesheet" type="text/css" href="includes/assets/css/register.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/register.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/js/register.js"></script>
 </head>
 <body>
+	<?php
+
+	if(isset($_POST['registerButton'])) {
+		echo '<script>
+				$(document).ready(function() {
+					$("#loginForm").hide();
+					$("#registerForm").show();
+				});
+			</script>';
+	}
+	else {
+		echo '<script>
+				$(document).ready(function() {
+					$("#loginForm").show();
+					$("#registerForm").hide();
+				});
+			</script>';
+	}
+
+	?>
+	
+
 	<div id="background">
 
 		<div id="loginContainer">
@@ -31,7 +57,7 @@
 					<p>
 						<?php echo $account->getError(Constants::$loginFailed); ?>
 						<label for="loginUsername">Username</label>
-						<input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. bartSimpson" required>
+						<input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. bartSimpson" value="<?php getInputValue('loginUsername') ?>" required>
 					</p>
 					<p>
 						<label for="loginPassword">Password</label>
@@ -105,6 +131,12 @@
 
 
 			</div>
+
+			<div id="loginText">
+				<h1>This is a nest of musical bird</h1>
+				<h2>Enjoy the good song</h2>
+			</div>
+
 		</div>
 	</div>
 
