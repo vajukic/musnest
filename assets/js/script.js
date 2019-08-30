@@ -61,8 +61,27 @@ function Audio() {
         this.audio.src = track.path;
     }
 
+
     this.play = function() {
-        this.audio.play();
+
+        //Fixed a bug using the promise
+        //https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
+        var playPromise = this.audio.play();
+
+        if (playPromise !== undefined) {
+            playPromise.then(_ => {
+                    // Automatic playback started!
+                    console.log("Track is playing!");
+                    this.audio.play();
+                })
+                .catch(error => {
+                    console.log("Hey! There is some error! Klick again play button!");
+                    // Auto-play was prevented
+                    // Show paused UI.
+                    $(".controlButton.play").show();
+                    $(".controlButton.pause").hide();
+                });
+        }
     }
 
     this.pause = function() {
