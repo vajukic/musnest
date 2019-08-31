@@ -6,7 +6,7 @@ $resultArray = array();
 while($row = mysqli_fetch_array($songQuery)) {
 	array_push($resultArray, $row['id']);
 }
-echo $resultArray;
+
 $jsonArray = json_encode($resultArray);
 ?>
 
@@ -166,14 +166,11 @@ function setTrack(trackId, newPlaylist, play) {
 	$.post("includes/handlers/ajax/getSongJson.php", { songId: trackId }, function(data) {
 
 		var track = JSON.parse(data);
-		console.log(data);
 		$(".trackName span").text(track.title);
 
 		$.post("includes/handlers/ajax/getArtistJson.php", { artistId: track.artist }, function(data) {
 			var artist = JSON.parse(data);
-			
 			$(".artistName span").text(artist.name);
-			
 		});
 
 		$.post("includes/handlers/ajax/getAlbumJson.php", { albumId: track.album }, function(data) {
@@ -183,12 +180,12 @@ function setTrack(trackId, newPlaylist, play) {
 
 
 		audioElement.setTrack(track);
-		playSong();
+
+		if(play == true) {
+			playSong();
+		}
 	});
 
-	if(play == true) {
-		audioElement.play();
-	}
 }
 
 function playSong() {
@@ -207,7 +204,6 @@ function pauseSong() {
 	$(".controlButton.pause").hide();
 	audioElement.pause();
 }
-
 </script>
 
 
