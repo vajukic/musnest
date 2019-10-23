@@ -17,7 +17,7 @@
 
 <html>
 <head>
-	<title>Welcome to Slotify!</title>
+	<title>Welcome to Musnest!</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/register.css">
 
@@ -133,13 +133,8 @@
 			</div>
 
 			<div id="loginText">
-				<h1>Get great music, right now</h1>
-				<h2>Listen to loads of songs for free</h2>
-				<ul>
-					<li>Discover music you'll fall in love with</li>
-					<li>Create your own playlists</li>
-					<li>Follow artists to keep up to date</li>
-				</ul>
+				<h1>This is a nest of musical bird</h1>
+				<h2>Enjoy the good song</h2>
 			</div>
 
 		</div>
