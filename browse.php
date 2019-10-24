@@ -2,10 +2,6 @@
 include("includes/includedFiles.php"); 
 ?>
 
-<div class="buttonItems">
-	<button class="button" onclick="logout()">LOGOUT</button>
-</div>
-
 <h1 class="pageHeadingBig">Enjoy... :)</h1>
 
 <div class="gridViewContainer">
