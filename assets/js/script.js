@@ -8,6 +8,12 @@ var repeat = false;
 var shuffle = false;
 var userLoggedIn;
 
+function logout() {
+	$.post("includes/handlers/ajax/logout.php", function() {
+		location.reload();
+	});
+}
+
 function openPage(url) {
 
 	if(url.indexOf("?") == -1) {
