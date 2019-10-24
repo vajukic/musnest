@@ -26,6 +26,10 @@ else {
 	<script src="assets/js/script.js"></script>
 </head>
 <body>
+	
+	<div class="buttonItems">
+		<button class="button" onclick="logout()">LOGOUT</button>
+	</div>
 
 	<div id="mainContainer">
 
