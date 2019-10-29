@@ -24,7 +24,7 @@ body {
 }
 
 #loginContainer {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     position: relative;
     max-width: 1024px;
@@ -58,11 +58,20 @@ body {
 }
 
 #inputContainer {
-    width: 400px;
-    padding: 45px;
+    width: 100%;
+    /*padding: 45px;*/
+    padding-top: 45px;
     float: left;
     border-right: 1px solid #999;
 }
+
+/*laki*/
+@media screen and (max-width: 576px) {
+    #inputContainer {
+        border-right: transparent;
+    }
+}
+/*laki*/
 
 #inputContainer h2 {
     text-align: center;
@@ -77,7 +86,8 @@ body {
     border-bottom: 1px solid #fff;
     height: 27px;
     line-height: 27px;
-    width: 100%;
+    width: 70%;
+    margin: auto;
 }
 
 #inputContainer label {
@@ -85,7 +95,16 @@ body {
     font-size: 13px;
     margin-top: 15px;
     display: block;
+    padding-left: 75px;
 }
+
+/*laki*/
+@media screen and (max-width: 576px) {
+    #inputContainer label {
+        padding-left: 45px;
+    }
+}
+/*laki*/
 
 #inputContainer button {
     background-color: transparent;
@@ -97,7 +116,7 @@ body {
     letter-spacing: 1px;
     margin: 20px auto;
     height: 41px;
-    width: 100%;
+    width: 50%;
 }
 
 #inputContainer button:hover {
@@ -130,12 +149,38 @@ body {
     font-weight: bold;
 }
 
+/*laki*/
+@media screen and (max-width: 576px) {
+    #loginText h1 {
+        text-align: center;
+        color: #07d159;
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+/*laki*/
+
 #loginText h2 {
     margin: 35px 0;
 }
 
-#inputContainer .errorMessage {
-    color: #07d159;
-    font-size: 12px;
+/*laki*/
+@media screen and (max-width: 576px) {
+    #loginText h2 {
+        text-align: center;
+        font-size: 15px;
+    }
+}
+/*laki*/
+
+#inputContainer .errorMessage:not(:empty) {
+    color: white;
+    font-size: 15px;
     display: block;
+    border: 2px solid red;
+    border-radius: 5px;
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    padding: 5px;
 }

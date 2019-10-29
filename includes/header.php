@@ -19,17 +19,23 @@ else {
 <html>
 <head>
 	<title>Welcome to Musnest!</title>
-
+	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+	<!--laki-->
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!--laki-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="assets/js/script.js"></script>
 </head>
 <body>
-	
-	<div class="buttonItems">
-		<button class="button" onclick="logout()">LOGOUT</button>
-	</div>
+
+	<!--<div class="buttonItems">
+		<button class="button" style="outline: none;" onclick="logout()">LOGOUT</button>
+	</div>-->
 
 	<div id="mainContainer">
 

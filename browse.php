@@ -2,6 +2,10 @@
 include("includes/includedFiles.php"); 
 ?>
 
+<!--<div class="buttonItems">
+	<button class="button" style="outline: none;" onclick="logout()">LOGOUT</button>
+</div>-->
+
 <h1 class="pageHeadingBig">Enjoy... :)</h1>
 
 <div class="gridViewContainer">
@@ -15,8 +19,8 @@ include("includes/includedFiles.php");
 
 
 			echo "<div class='gridViewItem'>
-					<span role='link' tabindex='0' onclick='openPage(\"album.php?id=" . $row['id'] . "\")'>
-						<img src='" . $row['artworkPath'] . "'>
+					<span role='link' tabindex='0' onclick='openPage(\"album.php?id=" . $row['id'] . "\")' style='outline: none;'>
+						<img src='" . $row['artworkPath'] . "' style='cursor: pointer;'>
 
 						<div class='gridViewInfo'>"
 							. $row['title'] .

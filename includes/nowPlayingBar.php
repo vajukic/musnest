@@ -272,7 +272,7 @@ function pauseSong() {
 					<span class="progressTime current">0.00</span>
 
 					<div class="progressBar">
-						<div class="progressBarBg">
+						<div class="progressBarBg" style="height: 16px;">
 							<div class="progress"></div>
 						</div>
 					</div>
@@ -296,7 +296,7 @@ function pauseSong() {
 				</button>
 
 				<div class="progressBar">
-					<div class="progressBarBg">
+					<div class="progressBarBg" style="height: 16px; margin-top: 20px;">
 						<div class="progress"></div>
 					</div>
 				</div>

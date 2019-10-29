@@ -39,12 +39,11 @@ $artist = $album->getArtist();
 			$albumSong = new Song($con, $songId);
 			$albumArtist = $albumSong->getArtist();
 
-			echo "<li class='tracklistRow'>
+		echo 	"<li class='tracklistRow'>
 					<div class='trackCount'>
 						<img class='play' src='assets/images/icons/play-white.png' onclick='setTrack(\"" . $albumSong->getId() . "\", tempPlaylist, true)'>
 						<span class='trackNumber'>$i</span>
 					</div>
-
 
 					<div class='trackInfo'>
 						<span class='trackName'>" . $albumSong->getTitle() . "</span>
@@ -58,8 +57,6 @@ $artist = $album->getArtist();
 					<div class='trackDuration'>
 						<span class='duration'>" . $albumSong->getDuration() . "</span>
 					</div>
-
-
 				</li>";
 
 			$i = $i + 1;

@@ -12,9 +12,10 @@ body {
 }
 
 body {
-    background-color: #181818;
+    background-color: #181818 !important;
     font-size: 14px;
-    min-width: 720px;
+    /*min-width: 720px;*/
+    min-width: 450px;
 }
 
 #nowPlayingBarContainer {
@@ -22,7 +23,8 @@ body {
     background-color: #282828;
     bottom: 0;
     position: fixed;
-    min-width: 620px;
+    padding-bottom: 16px;
+    /*min-width: 620px;*/
 }
 
 #nowPlayingBar {
@@ -35,8 +37,21 @@ body {
 #nowPlayingLeft,
 #nowPlayingRight {
     width: 30%;
-    min-width: 180px;
+    /*min-width: 180px;*/
 }
+
+/*laki*/
+@media screen and (max-width: 576px) {
+    #nowPlayingLeft {
+        width: 30%;
+    }
+}
+@media screen and (max-width: 576px) {
+    #nowPlayingRight {
+        display: none;
+    }
+}
+/*laki*/
 
 #nowPlayingRight {
     position: relative;
@@ -44,12 +59,20 @@ body {
 }
 
 #nowPlayingCenter {
-    width: 40%;
+    width: 70%;
     max-width: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/*laki*/
+@media screen and (max-width: 576px) {
+    #nowPlayingCenter {
+        width: 60%;
+    }
+}
+/*laki*/
 
 #nowPlayingBar .content {
     width: 100%;
@@ -126,6 +149,14 @@ body {
     background-size: cover;
 }
 
+/*laki*/
+@media screen and (max-width: 576px) {
+    #nowPlayingLeft .albumArtwork {
+        display: none;
+    }
+}
+/*laki*/
+
 #nowPlayingLeft .trackInfo {
     display: table;
 }
@@ -142,7 +173,7 @@ body {
 }
 
 .volumeBar {
-    width: 180px;
+    /*width: 180px;*/
     position: absolute;
     right: 0;
 }
@@ -157,7 +188,7 @@ body {
 }
 
 #navBarContainer {
-    background-color: #000;
+    background-color: black;
     width: 220px;
     height: 100vh;
     position: fixed;
@@ -165,12 +196,31 @@ body {
     left: 0;
 }
 
+/*laki*/
+@media screen and (max-width: 576px) {
+    #navBarContainer {
+        display: none;
+    }
+}
+/*laki*/
+
 .navBar {
     padding: 25px;
     display: flex;
     flex-direction: column;
     -ms-flex-direction: column;
 }
+
+/*laki*/
+@media screen and (max-width: 576px) {
+    .navBar {
+        padding: 25px;
+        display: flex;
+        flex-direction: row;
+        -ms-flex-direction: row;
+    }
+}
+/*laki*/
 
 .logo {
     margin-bottom: 15px;
@@ -185,36 +235,45 @@ body {
     padding: 10px 0;
 }
 
-.navItem {
+/*.navItem {
     padding: 10px 0;
     font-size: 14px;
     font-weight: 700;
     display: block;
     letter-spacing: 1px;
     position: relative;
-}
+}*/
 
-.navItemLink {
+/*.navItemLink {
     color: #a0a0a0;
     text-decoration: none;
-}
+}*/
 
-.navItemLink:hover {
+/*.navItemLink:hover {
     color: #ffffff;
-}
+}*/
 
-.navItemLink .icon {
+/*.navItemLink .icon {
     position: absolute;
     right: 0;
     top: 6px;
     width: 25px;
-}
+}*/
 
 #mainViewContainer {
     margin-left: 220px;
     padding-bottom: 90px;
     width: calc(100% - 220px);
 }
+
+/*laki*/
+@media screen and (max-width: 576px) {
+    #mainViewContainer {
+        margin: 50px 0px 0px 10px;
+        width: 100%;
+    }
+}
+/*laki*/
 
 #mainContent {
     padding: 0 20px;
@@ -233,6 +292,16 @@ body {
     min-width: 150px;
     margin-bottom: 20px;
 }
+
+/*laki*/
+@media screen and (max-width: 576px) {
+    .gridViewItem {
+        margin-left: 1%;
+        width: 43%;
+        
+    }
+}
+/*laki*/
 
 .gridViewItem img {
     width: 100%;
@@ -256,6 +325,14 @@ body {
     display: inline-block;
     width: 100%;
 }
+
+/*laki*/
+@media screen and (max-width: 576px) {
+    .entityInfo {
+        margin-top: 40px;
+    }
+}
+/*laki*/
 
 .entityInfo .leftSection {
     width: 30%;
@@ -288,7 +365,7 @@ body {
 }
 
 .tracklistRow {
-    height: 40px;
+    height: 65px;
     padding: 15px 10px;
     list-style: none;
 }
@@ -351,7 +428,7 @@ body {
 }
 
 .tracklistRow .trackDuration {
-    width: 12%;
+    width: 10%;
     float: left;
     text-align: right;
 }
@@ -362,9 +439,18 @@ body {
 }
 
 .buttonItems {
-    float: right;
+    float: left;
     margin: 0 auto 20px auto;
+    outline: none;
 }
+
+/*laki*/
+@media screen and (max-width: 576px) {
+    .buttonItems {
+        display: none;
+    }
+}
+/*laki*/
 
 .button {
     position: fixed;
