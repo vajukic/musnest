@@ -416,21 +416,6 @@ koju im dodeljuje gidViewItem */
     display: block;
 }
 
-.tracklistRow .trackOptions {
-    width: 5%;
-    float: left;
-    text-align: right;
-}
-
-.tracklistRow .trackOptions img {
-    width: 15px;
-    visibility: hidden;
-}
-
-.tracklistRow:hover .trackOptions img {
-    visibility: visible;
-}
-
 .tracklistRow .trackDuration {
     width: 10%;
     float: left;
