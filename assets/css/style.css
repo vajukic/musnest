@@ -10,7 +10,7 @@ body {
     color: #fff;
     letter-spacing: 1px;
 }
-
+/* J-> Ubacujemo minimalnu sirinu: smanjujemo stranicu ne prelazi zadatu sirinu, nece se vise smanjivati*/
 body {
     background-color: #181818 !important;
     font-size: 14px;
@@ -260,6 +260,8 @@ body {
     width: 25px;
 }*/
 
+/* J-> Stavljamo margin od 220px jer nam je navBar te sirine; Sirinu racunamo umanjenu za NaveBar; 
+padding-bottom u skladu sa visinom nowPlayingBar*/
 #mainViewContainer {
     margin-left: 220px;
     padding-bottom: 90px;
@@ -303,10 +305,12 @@ body {
 }
 /*laki*/
 
+/* J-> Podesavanje slika da budu iste velicine. One ce zauzeti 100% sirine koja im je slobodna
+koju im dodeljuje gidViewItem */
 .gridViewItem img {
     width: 100%;
 }
-
+/* J-> Podesavanje fonta u okviru glavne stranice; Skraceni prikaz dugog naziva albuma*/
 .gridViewInfo {
     font-weight: 300;
     text-align: center;
@@ -367,7 +371,7 @@ body {
 .tracklistRow {
     height: 65px;
     padding: 15px 10px;
-    list-style: none;
+    list-style: none; /* J-> Da izbacimo tacke iz liste */
 }
 
 .tracklistRow span {
@@ -386,11 +390,11 @@ body {
 
 .tracklistRow .trackCount img {
     width: 20px;
-    visibility: hidden;
+    visibility: hidden; /* J-> da se pokaze samo kada predjemo misem */
     position: absolute;
     cursor: pointer;
 }
-
+/* J-> kada predjemo misem da se pokaze slika*/
 .tracklistRow:hover .trackCount img {
     visibility: visible;
 }
@@ -398,7 +402,7 @@ body {
 .tracklistRow .trackCount span {
     visibility: visible;
 }
-
+/* J-> da se redni broj ne vidi kada predjemo misem */
 .tracklistRow:hover .trackCount span {
     visibility: hidden;
 }
@@ -407,7 +411,7 @@ body {
     width: 75%;
     float: left;
 }
-
+/* J-> da se prikazu jedan ispod drugog */ 
 .tracklistRow .trackInfo span {
     display: block;
 }

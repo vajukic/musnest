@@ -26,7 +26,7 @@
 		public function getTitle() {
 			return $this->title;
 		}
-
+// J-> Ovde nam se vraca Artist kao objekat, njga smo vec kreirali u fajlu album.php
 		public function getArtist() {			
 			return new Artist($this->con, $this->artistId);
 		}
@@ -43,7 +43,7 @@
 			$query = mysqli_query($this->con, "SELECT id FROM songs WHERE album='$this->id'");
 			return mysqli_num_rows($query);
 		}
-
+// J-> Ova funkcija getSongsId vraca niz sa pesmama iz albuma
 		public function getSongIds() {
 
 			$query = mysqli_query($this->con, "SELECT id FROM songs WHERE album='$this->id' ORDER BY albumOrder ASC");

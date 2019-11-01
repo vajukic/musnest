@@ -1,3 +1,5 @@
+			<!-- J-> U ovom fajlu se nalazi sve sto se nalazi sadrzaj koji je isti za svaku stranicu-->
+	
 				</div>
 
 

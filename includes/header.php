@@ -15,9 +15,10 @@ else {
 }
 
 ?>
-
+<!-- J-> U ovom fajlu se nalazi sadrzaj koji je isti za svaku stranicu-->
 <html>
 <head>
+	
 	<title>Welcome to Musnest!</title>
 	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
